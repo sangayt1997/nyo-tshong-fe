@@ -7,6 +7,15 @@ module.exports = {
         // Or if using `src` directory:
         './src/**/*.{js,ts,jsx,tsx}'
     ],
+    theme: {
+        extend: {
+          fontFamily: {
+            poppins: ["'Poppins_Regular'"],
+            poppins_medium: ["'Poppins_Medium'"],
+            poppins_bold: ["'Poppins_Bold'"],
+          },
+        },
+    },
     daisyui: {
         themes: [
             {
