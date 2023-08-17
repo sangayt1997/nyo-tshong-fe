@@ -10,9 +10,9 @@ module.exports = {
     theme: {
         extend: {
           fontFamily: {
-            poppins: ["'Poppins_Regular'"],
-            poppins_medium: ["'Poppins_Medium'"],
-            poppins_bold: ["'Poppins_Bold'"],
+            poppins: ['var(--font-poppins-regular)'],
+            poppins_medium: ['var(--font-poppins-medium)'],
+            poppins_bold: ['var(--font-poppins-bold)'],
           },
         },
     },
