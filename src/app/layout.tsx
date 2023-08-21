@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './assets/stylesheets/global.scss';
+import './stylesheets/global.scss';
 import StyledComponentsRegistry from "@/lib/registry";
 import { poppins_bold, poppins_medium, poppins_regular } from './fonts/fonts';
 
