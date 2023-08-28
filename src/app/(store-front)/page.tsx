@@ -10,7 +10,7 @@ export default function Home() {
                 src="https://res.cloudinary.com/dsim60jne/image/upload/v1684229456/personal%20website%20asset/stellar_minds_banner_msbzlw.png"
                 width={500}
                 height={600}
-                alt="picturea"
+                alt="picture"
                 style={{width: 'auto', height: 'auto'}}
                 priority={true}
             />
