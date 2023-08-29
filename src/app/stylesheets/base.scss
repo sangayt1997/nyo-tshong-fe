@@ -2,18 +2,11 @@
 
 @layer base {
   body {
-    @apply min-h-screen font-poppins text-[14px] tracking-[0.15px] text-black/[.87];
+    @apply min-h-screen bg-white font-poppins text-[16px] tracking-[0.15px] text-black/[0.87];
   }
 
   body::-webkit-scrollbar {
     @apply hidden;
-  }
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:active,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:hover {
-    -webkit-box-shadow: 0 0 0 30px rgb(var(--white)) inset !important;
   }
 
   h1 {
