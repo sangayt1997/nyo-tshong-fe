@@ -49,6 +49,9 @@ module.exports = {
               400: "var(--secondary-400)",
               500: "var(--secondary-500)",
               600: "var(--secondary-600)",
+              700: "var(--secondary-700)",
+              800: "var(--secondary-800)",
+              900: "var(--secondary-900)",
             },
             neutral: {
               50: "var(--neutral-50)",
@@ -73,8 +76,8 @@ module.exports = {
         themes: [
             {
                 customTheme: {
-                    primary: "#E9DDD0",
-                    "secondary": "#F69883",
+                   "primary": "#1B6FE4",
+                    "secondary": "#06B6D4",
                     "accent": "#a3e635",
                     "neutral": "#1f2937",
                     "base-100": "#e0e1eb",
