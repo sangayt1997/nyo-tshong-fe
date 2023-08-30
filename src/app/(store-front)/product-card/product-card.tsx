@@ -7,8 +7,8 @@ interface ProductCardProps {
     image: string | StaticImport;
     description?: string;
     price?: string | number;
-    rate?: string | number,
-    count?: string | number 
+    category?: string;
+    rating?: { rate?: number, count?: number }
 }
 
 export default function ProductCard (props : ProductCardProps) {
@@ -23,8 +23,9 @@ export default function ProductCard (props : ProductCardProps) {
             />
             <h5>{props.title}</h5>
             <p>{props.description}</p>
+            <p>Category: {props.category}</p>
             <p>Price: ${props.price}</p>
-            <p>Rating: {props?.rate} ({props?.count} reviews)</p>
+            <p>Rating: {props?.rating?.rate} ({props?.rating?.count} reviews)</p>
       </div>
     );
 }
