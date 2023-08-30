@@ -15,13 +15,13 @@ export default function ProductCard (props : ProductCardProps) {
     return (
         <div id={props.id}>
             <Image 
-            src={props.image} 
-            alt={props.title} 
-            width={142}
-            height={124}
-            priority={true}
+                src={props.image} 
+                alt={props.title} 
+                width={142}
+                height={124}
+                priority={true}
             />
-            <h2>{props.title}</h2>
+            <h5>{props.title}</h5>
             <p>{props.description}</p>
             <p>Price: ${props.price}</p>
             <p>Rating: {props?.rate} ({props?.count} reviews)</p>
