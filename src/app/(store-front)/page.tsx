@@ -20,14 +20,14 @@ export default async function Home() {
             <div className="product-list">
                 {products.map((item : any, index: number) => (
                     <ProductCard 
-                        key={index} 
+                        key={index}
                         id={item?.id}
-                        image={item?.image} 
-                        title={item?.title} 
-                        description={item?.description} 
+                        image={item?.image}
+                        title={item?.title}
+                        description={item?.description}
+                        category={item.category}
                         price={item?.price}
-                        rate={item?.rating?.rate}
-                        count={item?.rating?.count}
+                        rating={item.rating}
                     />
                 ))}
             </div>
