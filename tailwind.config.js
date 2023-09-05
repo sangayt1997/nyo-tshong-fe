@@ -70,6 +70,14 @@ module.exports = {
             poppins_medium: ['var(--font-poppins-medium)'],
             poppins_bold: ['var(--font-poppins-bold)'],
           },
+          boxShadow: {
+            sm: 'rgba(149, 157, 165, 0.2) 0 8px 24px',
+            DEFAULT: 'rgba(100, 100, 111, 0.2) 0 7px 29px 0',
+            md: 'rgba(99, 99, 99, 0.2) 0 2px 8px 0',
+            lg: 'rgba(17, 17, 26, 0.1) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px',
+            xl: 'rgba(17, 17, 26, 0.1) 0 8px 24px, rgba(17, 17, 26, 0.1) 0 16px 56px, rgba(17, 17, 26, 0.1) 0 24px 80px',
+            '2xl': 'rgba(0, 0, 0, 0.2) 0 20px 30px',
+          },
         },
     },
     daisyui: {
@@ -80,7 +88,6 @@ module.exports = {
                     "secondary": "#06B6D4",
                     "accent": "#a3e635",
                     "neutral": "#1f2937",
-                    "base-100": "#e0e1eb",
                     "info": "#1b6fe4",
                     "success": "#199f4c",
                     "warning": "#f5b770",

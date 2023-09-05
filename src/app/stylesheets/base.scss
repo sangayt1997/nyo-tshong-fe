@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen bg-white font-poppins text-[16px] tracking-[0.15px] text-black/[0.87];
+    @apply min-h-screen bg-white font-poppins text-[14px] tracking-[0.15px] text-black/[0.87];
   }
 
   body::-webkit-scrollbar {
@@ -31,5 +31,14 @@
 
   h6 {
     @apply font-poppins_bold text-[16px] leading-[25px] sm:text-[20px];
+  }
+}
+
+@layer components {
+  .text-description-truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 }

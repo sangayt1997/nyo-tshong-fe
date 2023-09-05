@@ -1,5 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
     id: string;
@@ -13,19 +14,21 @@ interface ProductCardProps {
 
 export default function ProductCard (props : ProductCardProps) {
     return (
-        <div id={props.id}>
-            <Image 
-                src={props.image} 
-                alt={props.title} 
-                width={142}
-                height={124}
-                priority={true}
-            />
-            <h5>{props.title}</h5>
-            <p>{props.description}</p>
-            <p>Category: {props.category}</p>
-            <p>Price: ${props.price}</p>
-            <p>Rating: {props?.rating?.rate} ({props?.rating?.count} reviews)</p>
-      </div>
+        <Link href="/">
+            <div className="bg-white rounded-[8px] shadow p-[16px] transition-transform transform hover:scale-101 hover:shadow-lg transition duration-300 cursor-pointer" id={props.id}>
+                <Image 
+                    src={props.image} 
+                    alt={props.title} 
+                    width={142}
+                    height={124}
+                    priority={true}
+                />
+                <p className="text-[16px] font-poppins_medium">{props.title}</p>
+                <p className="text-black/[0.60] text-description-truncate">{props.description}</p>
+                <p className="text-black/[0.60]">Category: <span className="text-black/[0.87] font-poppins_medium">{props.category}</span></p>
+                <p className="text-black/[0.60]">Price: <span className="text-black/[0.87] font-poppins_medium">${props.price}</span></p>
+                <p className="text-black/[0.60]">Rating: <span className="text-black/[0.87] font-poppins_medium">{props?.rating?.rate} ({props?.rating?.count} reviews)</span></p>
+            </div>
+        </Link>
     );
 }

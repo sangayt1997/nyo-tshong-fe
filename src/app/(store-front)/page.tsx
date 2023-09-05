@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductCard from "./product-card/product-card";
 
 async function getProducts() {
@@ -16,10 +15,10 @@ export default async function Home() {
     const products = await getProducts();
 
     return (
-        <main>
-            <div className="product-list">
-                {products.map((item : any, index: number) => (
-                    <ProductCard 
+        <main className="p-[16px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
+                {products.map((item: any, index: number) => (
+                    <ProductCard
                         key={index}
                         id={item?.id}
                         image={item?.image}
