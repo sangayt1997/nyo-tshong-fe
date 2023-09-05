@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProductCard from "./product-card/product-card";
 
 async function getProducts() {

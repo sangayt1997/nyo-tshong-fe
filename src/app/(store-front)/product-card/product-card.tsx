@@ -21,11 +21,11 @@ export default function ProductCard (props : ProductCardProps) {
                 height={124}
                 priority={true}
             />
-            <h5>{props.title}</h5>
-            <p>{props.description}</p>
-            <p>Category: {props.category}</p>
-            <p>Price: ${props.price}</p>
-            <p>Rating: {props?.rating?.rate} ({props?.rating?.count} reviews)</p>
+            <p className="text-[16px] font-poppins_medium">{props.title}</p>
+            <p className="text-black/[0.60]">{props.description}</p>
+            <p className="text-black/[0.60]">Category: <span className="text-black/[0.87] font-poppins_medium">{props.category}</span></p>
+            <p className="text-black/[0.60]">Price: <span className="text-black/[0.87] font-poppins_medium">${props.price}</span></p>
+            <p className="text-black/[0.60]">Rating: <span className="text-black/[0.87] font-poppins_medium">{props?.rating?.rate} ({props?.rating?.count} reviews)</span></p>
       </div>
     );
 }
