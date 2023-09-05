@@ -13,7 +13,8 @@ interface ProductCardProps {
 
 export default function ProductCard (props : ProductCardProps) {
     return (
-        <div id={props.id}>
+        <a href="#">
+            <div className="bg-white rounded-[8px] shadow p-[4px] hover:shadow-lg transition duration-300 cursor-pointer" id={props.id}>
             <Image 
                 src={props.image} 
                 alt={props.title} 
@@ -27,5 +28,6 @@ export default function ProductCard (props : ProductCardProps) {
             <p className="text-black/[0.60]">Price: <span className="text-black/[0.87] font-poppins_medium">${props.price}</span></p>
             <p className="text-black/[0.60]">Rating: <span className="text-black/[0.87] font-poppins_medium">{props?.rating?.rate} ({props?.rating?.count} reviews)</span></p>
       </div>
+        </a>
     );
 }

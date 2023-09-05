@@ -16,9 +16,9 @@ export default async function Home() {
 
     return (
         <main>
-            <div className="product-list">
+            <div className="p-[16px]">
                 {products.map((item : any, index: number) => (
-                    <ProductCard 
+                    <ProductCard
                         key={index}
                         id={item?.id}
                         image={item?.image}
