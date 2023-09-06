@@ -1,4 +1,4 @@
-import ProductCard from "./product-card/product-card";
+import ProductCard from "../components/product-card/product-card";
 
 async function getProducts() {
     const res = await fetch('https://fakestoreapi.com/products')
