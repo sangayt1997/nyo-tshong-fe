@@ -20,9 +20,11 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${poppins_regular.variable} ${poppins_medium.variable} ${poppins_bold.variable}`}>
             <body>
-                <Header />
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-                <Footer />
+                <StyledComponentsRegistry>
+                    <Header />
+                    {children}
+                    <Footer />
+                </StyledComponentsRegistry>
             </body>
         </html>
     )
