@@ -16,6 +16,9 @@ module.exports = {
         // Or if using `src` directory:
         './src/**/*.{js,ts,jsx,tsx}'
     ],
+    safelist: [
+      "",
+    ],
     theme: {
         colors: {
             transparent: "transparent",
@@ -27,10 +30,8 @@ module.exports = {
             info: withOpacityValue("--info"),
             primary: {
               50: "var(--primary-50)",
-              60: "var(--primary-60)",
               100: "var(--primary-100)",
               200: "var(--primary-200)",
-              250: "var(--primary-250)",
               300: "var(--primary-300)",
               400: "var(--primary-400)",
               500: "var(--primary-500)",
@@ -41,10 +42,8 @@ module.exports = {
             },
             secondary: {
               50: "var(--secondary-50)",
-              60: "var(--secondary-60)",
               100: "var(--secondary-100)",
               200: "var(--secondary-200)",
-              250: "var(--secondary-250)",
               300: "var(--secondary-300)",
               400: "var(--secondary-400)",
               500: "var(--secondary-500)",

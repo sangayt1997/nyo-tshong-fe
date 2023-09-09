@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import './stylesheets/global.scss';
 import StyledComponentsRegistry from "@/lib/registry";
 import { poppins_bold, poppins_medium, poppins_regular } from './fonts/fonts';
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 
 export const metadata: Metadata = {
@@ -18,7 +20,11 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${poppins_regular.variable} ${poppins_medium.variable} ${poppins_bold.variable}`}>
             <body>
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+                <StyledComponentsRegistry>
+                    <Header />
+                    {children}
+                    <Footer />
+                </StyledComponentsRegistry>
             </body>
         </html>
     )
