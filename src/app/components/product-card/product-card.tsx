@@ -21,10 +21,10 @@ export default function ProductCard (props : ProductCardProps) {
                         <Image 
                             src={props.image} 
                             alt={props.title} 
-                            layout="fill" // required
-                            objectFit="contain" // change as you like
+                            fill // required
                             priority={true}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{objectFit: "contain"}}
                         />
                     </div>
                 </div>
