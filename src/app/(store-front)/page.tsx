@@ -15,7 +15,7 @@ export default async function Home() {
     const products = await getProducts();
 
     return (
-        <main className="p-[16px]">
+        <main className="px-[24px] py-[32px]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
                 {products.map((item: any, index: number) => (
                     <ProductCard
