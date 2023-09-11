@@ -20,7 +20,8 @@ module.exports = {
       "",
     ],
     theme: {
-        colors: {
+        extend: {
+          colors: {
             transparent: "transparent",
             white: withOpacityValue("--white"),
             black: withOpacityValue("--black"),
@@ -63,7 +64,6 @@ module.exports = {
               700: "var(--neutral-700)",
             },
           },
-        extend: {
           fontFamily: {
             poppins: ['var(--font-poppins-regular)'],
             poppins_medium: ['var(--font-poppins-medium)'],

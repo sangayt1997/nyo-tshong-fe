@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header () {
     return (
         // TODO: Why color getting conflict with daisyUI theme
-        <header className="!bg-primary-500 p-[16px]">
+        <header className="bg-primary-50 p-[16px]">
             <div className="container mx-auto flex justify-between items-center">
                 <div>
                 <Link href="/">
