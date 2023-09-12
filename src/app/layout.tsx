@@ -8,8 +8,8 @@ import Footer from "./components/footer/footer";
 
 
 export const metadata: Metadata = {
-    title: 'Nyo-tshong',
-    description: 'Best shoping store',
+    title: 'Nyo-tshong-Best shopping store',
+    description: 'Best shopping store',
 }
 
 export default function RootLayout({
