@@ -14,14 +14,14 @@ interface ProductCardProps {
 
 export default function ProductCard (props : ProductCardProps) {
     return (
-        <Link href="/">
+        <Link href="/product-detail/1">
             <div className="bg-white rounded-[8px] shadow p-[16px] transition-transform transform hover:scale-105 hover:shadow-md transition duration-300 cursor-pointer" id={props.id}>
                 <div className="flex justify-center items-center">
                     <div className="relative h-[246px] w-[210px]">
                         <Image 
                             src={props.image} 
                             alt={props.title} 
-                            fill // required
+                            fill
                             priority={true}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             style={{objectFit: "contain"}}
