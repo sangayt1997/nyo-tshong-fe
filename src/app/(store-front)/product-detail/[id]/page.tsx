@@ -1,3 +1,4 @@
+import ProductCard from "@/app/components/product-card/product-card";
 import Image from "next/image";
 
 async function getProductDetail() {
@@ -11,11 +12,23 @@ async function getProductDetail() {
     return res.json()
   }
 
+  async function getProducts() {
+    const res = await fetch('https://fakestoreapi.com/products')
+   
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch FakeApi product data')
+    }
+   
+    return res.json()
+  }
+
 export default async function ProductDetail() {
     const productDetail = await getProductDetail();
+     const products = await getProducts();
 
     return (
-        <main className="h-screen px-[24px] py-[32px]">
+        <main className="px-[24px] py-[32px]">
             <div className="flex flex-row items-center px-[100px]">
                 <div className="relative h-[440px] w-[400px] mr-[80px]">
                     <Image 
@@ -41,8 +54,22 @@ export default async function ProductDetail() {
                     </button>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
-                <p>Product details</p>
+            <div className="mt-[24px]">
+                <p className="text-[20px] font-poppins_bold text-black/[0.87] mb-[24px]">Similiar Products</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
+                    {products.map((item: any, index: number) => (
+                        <ProductCard
+                            key={index}
+                            id={item?.id}
+                            image={item?.image}
+                            title={item?.title}
+                            description={item?.description}
+                            category={item.category}
+                            price={item?.price}
+                            rating={item.rating}
+                        />
+                    ))}
+                </div>
             </div>
         </main>
     )
