@@ -13,6 +13,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard (props : ProductCardProps) {
+    
     return (
         <Link href="/product-detail/1">
             <div className="bg-white rounded-[8px] shadow p-[16px] transition-transform transform hover:scale-105 hover:shadow-md transition duration-300 cursor-pointer" id={props.id}>
