@@ -27,6 +27,7 @@ export default async function Home() {
                         category={item.category}
                         price={item?.price}
                         rating={item.rating}
+                        href={`/product-detail/${item.id}`}
                     />
                 ))}
             </div>
