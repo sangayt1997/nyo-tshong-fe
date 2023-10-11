@@ -74,6 +74,7 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
                             category={item.category}
                             price={item?.price}
                             rating={item.rating}
+                            href={`/product-detail/${item.id}`}
                         />
                     ))}
                 </div>
