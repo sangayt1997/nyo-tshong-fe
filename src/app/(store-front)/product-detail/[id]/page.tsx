@@ -47,7 +47,6 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
                     />
                 </div>
                 <div>
-                    <p>My Product Detail ID: {productDetail.id}</p>
                     <p className="text-[24px] font-poppins_medium">{productDetail.title}</p>
                     <p className="text-[18px] text-black/[0.60] mt-[10px]">{productDetail.description}</p>
                     <p className="text-[16px] text-black/[0.60] mt-[10px]">Category: <span className="text-black/[0.87] font-poppins_medium">{productDetail.category}</span></p>
