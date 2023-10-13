@@ -74,6 +74,7 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
                             price={item?.price}
                             rating={item.rating}
                             href={`/product-detail/${item.id}`}
+                            as={`/product-detail/${item.id}?referrer=${item?.title}`}
                         />
                     ))}
                 </div>

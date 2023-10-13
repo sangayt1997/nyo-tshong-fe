@@ -1,7 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import Link from "next/link";
-import { UrlObject } from "url";
+import { Url, UrlObject } from "url";
 
 interface ProductCardProps {
     id: string;
@@ -12,12 +12,13 @@ interface ProductCardProps {
     category?: string;
     rating?: { rate?: number, count?: number }
     href?:  string | UrlObject;
+    as?: string;
 }
 
 export default function ProductCard (props : ProductCardProps) {
     
     return (
-        <Link href={`${props.href}`}>
+        <Link href={`${props.href}`} as={`${props?.as || ""}`}>
             <div className="bg-white rounded-[8px] shadow p-[16px] transition-transform transform hover:scale-105 hover:shadow-md transition duration-300 cursor-pointer" id={props.id}>
                 <div className="flex justify-center items-center">
                     <div className="relative h-[246px] w-[210px]">
