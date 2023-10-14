@@ -1,8 +1,14 @@
 import ProductCard from "@/app/components/product-card/product-card";
 import Image from "next/image";
 
-async function getProductDetail() {
-    const res = await fetch('https://fakestoreapi.com/products/1')
+interface ProductDetailProps {
+    params : {
+        id: string | number;
+    }
+}
+
+async function getProductDetail(id: string | number) {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`)
    
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
@@ -23,9 +29,9 @@ async function getProductDetail() {
     return res.json()
   }
 
-export default async function ProductDetail() {
-    const productDetail = await getProductDetail();
-     const products = await getProducts();
+export default async function ProductDetail({ params }: ProductDetailProps) {
+    const productDetail = await getProductDetail(params.id);
+    const products = await getProducts();
 
     return (
         <main className="px-[24px] py-[32px]">
@@ -67,6 +73,8 @@ export default async function ProductDetail() {
                             category={item.category}
                             price={item?.price}
                             rating={item.rating}
+                            href={`/product-detail/${item.id}`}
+                            as={`/product-detail/${item.id}?referrer=${item?.title}`}
                         />
                     ))}
                 </div>

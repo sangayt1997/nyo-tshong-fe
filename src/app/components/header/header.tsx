@@ -30,7 +30,7 @@ export default function Header () {
                 <Link href="/" className="uppercase text-primary-500 font-poppins_medium text-[18px]">
                     Nyo Tshong
                 </Link>
-                <nav className="space-x-4">
+                <nav className="space-x-[16px]">
                     {navData.map((item, index) => (
                         // TODO: Check why color doesn't change in Link tag
                         <Link key={index} href={item.redirect} className="text-black-[0.87] hover:text-primary-400 uppercase">
