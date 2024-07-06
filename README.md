@@ -18,7 +18,7 @@ yarn dev
 
 - Find the REST APIs docs here in [fakestoreapi](https://fakestoreapi.com/docs)
 
-## Learn More
+## Learn More 
 
 - To learn more about Next.js, take a look at the following resources:
 
